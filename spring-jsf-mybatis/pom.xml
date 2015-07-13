@@ -1,0 +1,110 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.cee</groupId>
+  <artifactId>spring-jsf-mybatis</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <name>spring-jsf-mybatis Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+    <JAVA_1_7_HOME>C:\Program Files\Java\jdk1.7.0_79</JAVA_1_7_HOME>
+    <!-- Includes most transitive dependencies for Spring web-flow with JSF integration. -->
+    <spring.faces.version>2.4.1.RELEASE</spring.faces.version>
+    <!-- Common Spring transitive dependencies for spring-faces. Version dependent on spring.faces.version. -->
+    <spring.common.version>4.0.6.RELEASE</spring.common.version>
+    <mysql.connector.version>5.1.35</mysql.connector.version>
+    <mybatis.version>3.3.0</mybatis.version>
+    <c3p0.version>0.9.1.2</c3p0.version>
+    <mybatis.spring.version>1.2.3</mybatis.spring.version>
+    <junit.version>4.12</junit.version>
+    <cglib.version>3.1</cglib.version>
+    <commons.lang.version>2.6</commons.lang.version>
+  </properties>
+  
+  <dependencies>    
+    <!-- Includes Spring security, mvc, webflow, core, context, jsf  -->
+    <dependency>
+      <groupId>org.springframework.webflow</groupId>
+      <artifactId>spring-faces</artifactId>
+      <version>${spring.faces.version}</version>
+    </dependency>
+    
+    
+    <!-- ORM -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>${mybatis.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${spring.common.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-spring</artifactId>
+      <version>${mybatis.spring.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql.connector.version}</version>
+    </dependency>
+    
+    <!-- to provide a pooled data connection... -->
+    <dependency>
+      <groupId>c3p0</groupId>
+      <artifactId>c3p0</artifactId>
+      <version>${c3p0.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>${spring.common.version}</version>
+    </dependency>    
+    
+    <dependency>
+      <groupId>cglib</groupId>
+      <artifactId>cglib</artifactId>
+      <version>${cglib.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <version>${commons.lang.version}</version>
+    </dependency>
+  </dependencies>
+  
+  <build>
+    <finalName>spring-jsf-mybatis</finalName>
+    <plugins>
+      <!-- The Maven Eclipse Plugin is used to generate Eclipse IDE files 
+          (*.classpath, *.project, *.wtpmodules and the .settings folder) -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <version>1.12</version>
+        <configuration>        
+          <downloadSources>true</downloadSources>
+          <downloadJavadocs>true</downloadJavadocs>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

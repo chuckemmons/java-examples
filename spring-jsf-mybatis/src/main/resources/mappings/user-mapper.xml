@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cee.sjm.persistence.mybatis.mapping.UserMapper">
+
+    <resultMap id="result" type="user">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+    </resultMap>
+
+    <select id="getAll" resultMap="result">
+        SELECT id,name
+        FROM user;
+    </select>
+
+    <insert id="save" parameterType="user">
+        INSERT INTO user (id,name)
+        VALUE (#{id},#{name})
+    </insert>
+
+    <update id="update" parameterType="user">
+        UPDATE user
+        SET    name = #{name}
+        WHERE  id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM user
+        WHERE id = #{id}
+    </delete>
+    
+    <select id="getByName" resultMap="result">
+        SELECT id,name
+        FROM user
+        WHERE name = #{name}
+    </select>
+</mapper>
