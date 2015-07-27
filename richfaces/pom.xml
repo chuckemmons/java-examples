@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>com.cee.example</groupId>
+  <artifactId>richfaces</artifactId>
+  <name>RichFaces 4 Example Application</name>
+  
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+  <url>http://jboss.org/richfaces</url>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+    <JAVA_1_7_HOME>C:\Program Files\Java\jdk1.7.0_79</JAVA_1_7_HOME>
+    <version.jboss.maven.plugin>7.4.Final</version.jboss.maven.plugin>
+    <richfaces.version>4.5.1.Final</richfaces.version>
+  </properties>
+  
+  <build>
+    <finalName>richfaces</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.1.1</version>
+      </plugin>
+      <!-- The Maven Eclipse Plugin is used to generate Eclipse IDE files 
+          (*.classpath, *.project, *.wtpmodules and the .settings folder) -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <version>1.12</version>
+        <configuration>        
+          <downloadSources>true</downloadSources>
+          <downloadJavadocs>true</downloadJavadocs>
+        </configuration>
+      </plugin>
+      <!-- <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.2</version>
+        <configuration>
+          <url>http://www.mydomain.com:1234/mymanager</url>
+        </configuration>
+      </plugin> -->
+    </plugins>
+  </build>
+  
+  <dependencies>  
+    <!-- RichFaces -->
+    <!-- <dependency>
+      <groupId>org.richfaces</groupId>
+      <artifactId>richfaces-core</artifactId>
+      <version>${richfaces.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.richfaces</groupId>
+      <artifactId>richfaces-a4j</artifactId>
+      <version>${richfaces.version}</version>
+    </dependency> -->
+    <dependency>
+      <groupId>org.richfaces</groupId>
+      <artifactId>richfaces</artifactId>
+      <version>${richfaces.version}</version>
+    </dependency>
+    <!-- JSF -->       
+    <dependency>
+      <groupId>com.sun.faces</groupId>
+      <artifactId>jsf-api</artifactId>
+      <version>2.2.11</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.faces</groupId>
+      <artifactId>jsf-impl</artifactId>
+      <version>2.2.11</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+    </dependency>
+  </dependencies>
+
+</project>
