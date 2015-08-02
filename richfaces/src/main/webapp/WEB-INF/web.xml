@@ -28,7 +28,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
-        <url-pattern>/faces/*</url-pattern>
+        <url-pattern>/app/*</url-pattern>
     </servlet-mapping>
     
     <!-- Resource Servlet - serves static resources and resources for specific components -->
@@ -70,7 +70,7 @@
     </session-config>
 
     <welcome-file-list>
-        <welcome-file>faces/index.xhtml</welcome-file>
+        <welcome-file>index.xhtml</welcome-file>
     </welcome-file-list>
 
     <login-config>
