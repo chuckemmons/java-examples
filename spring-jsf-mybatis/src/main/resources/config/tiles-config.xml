@@ -1,3 +1,0 @@
-<definition name="home">
-    <put-attribute name="content" value="/WEB-INF/view/home.jsp"/>
-</definition>

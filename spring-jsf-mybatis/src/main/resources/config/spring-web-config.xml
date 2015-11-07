@@ -19,8 +19,10 @@
 	</webflow:flow-executor>
 
 	<!-- The registry of executable flow definitions -->
-	<webflow:flow-registry id="flowRegistry" flow-builder-services="flowBuilderServices" base-path="/WEB-INF/flows">
-		<webflow:flow-location-pattern value="**/**/*-flow.xml" />
+	<webflow:flow-registry id="flowRegistry" 
+    flow-builder-services="flowBuilderServices" 
+    base-path="/WEB-INF/flows">
+		<webflow:flow-location-pattern value="/**/*-flow.xml" />
 	</webflow:flow-registry>
 
 	<!-- Configures the Spring Web Flow JSF integration -->
